@@ -1,5 +1,5 @@
 $(document).ready(() => {
-    $.post("https://timetravel-5ebe0.web.app/api/post", function (res) {
+    $.post("/api/post", function (res) {
         const data = res.result
         if (!data.image) { $('#image').css('display', 'none'); }
         if (!data.link) { $('#youtube').css('display', 'none'); }
