@@ -3,9 +3,7 @@ $(document).ready(function () {
   $("#year .data").text(dt.getFullYear());
   $("#hour .data").text(dt.getHours());
   $("#minute .data").text(dt.getMinutes());
-  $(".moon").css('display', 'none');
   $("#start").click(function () {
-    $(".moon").css('display', 'block');
     $("#year .data").text(9999);
     $("#hour .data").text(24);
     $("#minute .data").text(60);
@@ -21,7 +19,7 @@ $(document).ready(function () {
         }
         );
         setTimeout(() => {
-          $('body').fadeOut(1000, 'linear', () => window.location.reload());
+          $('body').fadeOut(1000, 'linear', () => window.location.href = '/result');
         }, 500);
     });
   })
