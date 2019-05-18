@@ -38,7 +38,7 @@ hr.line{
 .title{
     position: relative;
     color: white;
-    font-size: 50px;
+    font-size: 60px;
     font-weight: bold;
 }
 
@@ -69,4 +69,7 @@ button#restart {
     font-family: Roboto;
     bottom: 60px;
 }
-  
+
+.caption {
+    font-size: 40px;
+}
