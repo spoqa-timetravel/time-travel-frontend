@@ -1,9 +1,46 @@
-<p class="qa-activity-count-item">
-    <span class="data">2447</span> YEAR
-  </p>
-  <p class="qa-activity-count-item">
-    <span class="data">05</span> MONTH
-  </p>
-  <p class="qa-activity-count-item">
-    <span class="data">29</span> DAY
-  </p>
+<html>
+
+<head>
+  <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+  <script src="./script.js"></script>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link href='https://fonts.googleapis.com/css?family=Roboto:300' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Roboto:100' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+  <div class="app">
+      <div class="header">TIMETRAVEL</div>
+      <div style="margin: 10vh auto; width: 840px;">
+          <div id="year" class="time" style="width: 500px; height: 500px;">
+              <img class="background" src="./assets/img-gra-one.png" />
+              <div class="content">
+                <div class="data">9999</div>
+                <div class="label">YEAR</div>
+              </div>
+              <div class="moon"></div>
+              <div class="moon big"></div>
+            </div>
+            <div id="hour" class="time" style="width: 400px; height: 400px;">
+              <img class="background" src="./assets/img-gra-two.png" />
+              <div class="content">
+                <div class="data">24</div>
+                <div class="label">HOURS</div>
+              </div>
+              <div class="moon"></div>
+            </div>
+            <div id="minute" class="time" style="width: 340px; height: 340px;">
+              <img class="background" src="./assets/img-gra-three.png" />
+              <div class="content">
+                <div class="data">60</div>
+                <div class="label">MINUTES</div>
+              </div>
+              <div class="moon opposite"></div>
+              <div class="moon big"></div>
+            </div>
+      </div>
+      <button id="start">START</button>
+  </div>
+</body>
+
+</html>
