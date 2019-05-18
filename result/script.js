@@ -2,7 +2,8 @@ $(document).ready(() => {
     $.post("https://timetravel-5ebe0.web.app/api/post", function (res) {
         const data = res.result
         if (!data.image) { $('#image').css('display', 'none'); }
-        if (!data.youtube) { $('#youtube').css('display', 'none'); }
+        if (!data.link) { $('#youtube').css('display', 'none'); }
+        $('#title').text(data.title);
         $('#date').text(data.date);
         $('#youtube').attr('src', formatYoutubeUrl(data.link));
         $('#image').attr('src', data.image);
