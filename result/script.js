@@ -4,7 +4,7 @@ $(document).ready(() => {
         if (!data.image) { $('#image').css('display', 'none'); }
         if (!data.youtube) { $('#youtube').css('display', 'none'); }
         $('#date').text(data.date);
-        $('#youtube').attr('src', formatYoutubeUrl(data.youtube));
+        $('#youtube').attr('src', formatYoutubeUrl(data.link));
         $('#image').attr('src', data.image);
         $('#caption').text(data.caption);
     });
@@ -15,6 +15,9 @@ $(document).ready(() => {
 });
 
 function formatYoutubeUrl(url) {
+    if (!url) {
+        return url;
+    }
     let token;
     if (url.startsWith('https://youtu.be/')) {
         token = url.replace('https://youtu.be/', '');
