@@ -1,7 +1,5 @@
-@import url("https://fonts.googleapis.com/css?family=Bungee");
 body {
   background-color: #212121;
-  font-family: 'Bungee', cursive;
 }
 
 .moon {
@@ -44,16 +42,6 @@ body {
     border-radius: 100%;
 }
 
-@keyframes rolling2 {
-  to {
-    transform: rotate(-360deg);
-  }
-}
-@keyframes rolling {
-  to {
-    transform: rotate(360deg);
-  }
-}
 .time {
     position: relative;
   height: 350px;
@@ -63,16 +51,13 @@ body {
   border-radius: 100%;
 }
 
-.time .data {
+.time .content {
     color: white;
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
 }
-* {
-    box-sizing: border-box;
-  }
   h2 {
     text-align: center;
   }
@@ -89,4 +74,84 @@ body {
     display: block;
     font-size: 30px;
     font-family: "Arimo", sans-serif;
+  }
+
+  .content {
+    width: 100%;
+    text-align: center;
+  }
+
+
+#year .moon::after {
+  background-color: #49e6c1;
+}
+
+#year.time, #year .data, #year .label {
+  font-size: 42px;
+  color: #49e6c1;
+  border-color: #49e6c1;
+}
+
+#year.time .label {
+font-size: 22px;
+}
+
+#year.time img.background {
+  position: absolute;
+  width: calc(100% + 40px);
+  top: -20px;
+  left: -20px;
+}
+
+#hour .moon::after {
+  background-color: #cdb4fd;
+}
+
+#hour.time, #hour .data, #hour .label {
+  font-size: 35px;
+  color: #cdb4fd;
+  border-color: #cdb4fd;
+}
+
+#hour.time .label {
+  font-size: 20px;
+}
+
+#hour.time img.background {
+  position: absolute;
+  width: calc(100% - 10px);
+  left: 5px;
+  top: 5px;
+}
+
+#minute .moon::after {
+  background-color: #fffec1;
+}
+
+#minute.time, #minute .data, #minute .label {
+  font-size: 25px;
+  color: #fffec1;
+  border-color: #fffec1;
+}
+
+#minute.time .label {
+  font-size: 17px;
+}
+
+#minute.time img.background {
+  position: absolute;
+  width: calc(100% - 10px);
+  left: 5px;
+  top: 5px;
+}
+
+  @keyframes rolling2 {
+    to {
+      transform: rotate(-360deg);
+    }
+  }
+  @keyframes rolling {
+    to {
+      transform: rotate(360deg);
+    }
   }
