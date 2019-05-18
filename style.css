@@ -1,0 +1,21 @@
+* {
+    box-sizing: border-box;
+  }
+  h2 {
+    text-align: center;
+  }
+  .qa-activity-count-item {
+    width: 50%;
+    float: left;
+    font-size: 13px;
+    text-align: center;
+    white-space: nowrap;
+    transition: color 0.2s ease-in-out;
+  }
+  
+  .data {
+    display: block;
+    font-size: 30px;
+    font-family: "Arimo", sans-serif;
+  }
+  
