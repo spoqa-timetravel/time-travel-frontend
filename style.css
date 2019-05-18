@@ -1,5 +1,6 @@
-body {
+.app {
   background-color: #212121;
+  max-width: 400px;
 }
 
 .moon {
@@ -81,6 +82,17 @@ body {
     text-align: center;
   }
 
+#year.time {
+  margin: auto 0px auto auto;
+}
+
+#hour.time {
+  margin: -50px 0 0 10px;
+}
+
+#minute.time {
+  margin: -140px 10px auto auto;
+}
 
 #year .moon::after {
   background-color: #49e6c1;
