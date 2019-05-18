@@ -1,6 +1,6 @@
 $(document).ready(() => {
-    $('#youtube').attr('src', 'https://www.youtube.com/embed/NIld_iEc67s');
-    $.get("/post", function (data) {
+    $.post("https://timetravel-5ebe0.web.app/api/post", function (res) {
+        const data = res.result
         if (!data.image) { $('#image').css('display', 'none'); }
         if (!data.youtube) { $('#youtube').css('display', 'none'); }
         $('#date').text(data.date);
@@ -21,8 +21,8 @@ function formatYoutubeUrl(url) {
     } else {
         token = url.substring(url.indexOf('v=') + 2, url.length);
     }
-	if(token.includes('&')) {
-    	token = token.substring(0, token.indexOf('&'));
+    if (token.includes('&')) {
+        token = token.substring(0, token.indexOf('&'));
     }
     return `https://www.youtube.com/embed/${token}`;
 }
