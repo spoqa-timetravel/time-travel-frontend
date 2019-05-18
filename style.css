@@ -6,7 +6,6 @@
 body {
   display: flex;
   justify-content: center;
-  font-family: 'Roboto';
   background-color: #212121;
 }
 
@@ -25,7 +24,7 @@ body {
 
 .moon {
     position: relative;
-    animation: rolling 3s infinite linear;
+    animation: rolling 1s infinite linear;
     top: 50%;
     left: -10px;
     width: calc(100% + 20px);
@@ -34,15 +33,15 @@ body {
 .moon.big{
     left: -20px;
     width: calc(100% + 40px);
-    animation: rolling 5s infinite linear;
+    animation: rolling 3s infinite linear;
 }
 
 .moon.opposite{
-    animation: rolling2 3s infinite linear;
+    animation: rolling2 1s infinite linear;
 }
 
 .moon.big.opposite{
-    animation: rolling2 5s infinite linear;
+    animation: rolling2 3s infinite linear;
 }
 
 .moon.big::after {
@@ -180,14 +179,14 @@ body {
 
 button#start {
   display: block;
-  padding: 5px 0 0 0;
+  padding: 16px 0 10px 0;
   width: 50%;
   margin: 0 auto;
   background: #49e6c1;
-  border-radius: 15px;
+  border-radius: 40px;
   font-size: 50px;
   font-weight: bold;
-  font-family: NotoSansCJKkr;
+  font-family: Roboto;
 }
 
 .label {
