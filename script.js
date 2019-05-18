@@ -1,14 +1,12 @@
 $(document).ready(function () {
   var dt = new Date();
   $("#year .data").text(dt.getFullYear());
-  $("#hour .data").text(dt.getHours());
-  $("#minute .data").text(dt.getMinutes());
-  $(".moon").css('display', 'none');
+  $("#hour .data").text(dt.getMonth()+1);
+  $("#minute .data").text(dt.getDate());
   $("#start").click(function () {
-    $(".moon").css('display', 'block');
     $("#year .data").text(9999);
-    $("#hour .data").text(24);
-    $("#minute .data").text(60);
+    $("#hour .data").text(12);
+    $("#minute .data").text(31);
     $(".data").each(function () {
       var max = $(this).text();
       $(this).prop("Counter", 100)
@@ -21,7 +19,7 @@ $(document).ready(function () {
         }
         );
         setTimeout(() => {
-          $('body').fadeOut(1000, 'linear', () => window.location.reload());
+          $('body').fadeOut(1000, 'linear', () => window.location.href = 'result/index.html' );
         }, 500);
     });
   })
